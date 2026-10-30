@@ -1,25 +1,172 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Executive Chef Francesco Genchi</title>
+<meta name="description" content="Francesco Genchi, Executive Chef e Food & Beverage Manager. Alta cucina, banqueting ed eccellenza gastronomica.">
+<title>Francesco Genchi | Executive Chef</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}body{margin:0;background:#101010;color:#f5f0e8;font-family:Arial,sans-serif;line-height:1.7}header{padding:22px;text-align:center;border-bottom:1px solid #9e7c42}nav a{color:#e0c18b;margin:0 10px;text-decoration:none;font-size:14px}.hero{text-align:center;padding:90px 20px;background:linear-gradient(135deg,#080808,#30251b)}h1{font-family:Georgia,serif;font-size:clamp(38px,7vw,72px);color:#d9b574;line-height:1.15;margin:12px 0}h2{font-family:Georgia,serif;color:#d9b574;font-size:32px}.eyebrow{letter-spacing:4px;color:#d9b574;text-transform:uppercase}.hero p{font-size:19px}section{max-width:1050px;margin:auto;padding:65px 24px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{padding:28px;border:1px solid #6e5738;background:#1b1b1b;border-radius:8px}.card h3{color:#d9b574}.button{display:inline-block;background:#c6a065;color:#101010;padding:13px 25px;border-radius:4px;text-decoration:none;font-weight:bold;margin-top:15px}.muted{color:#c4bcb0}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.placeholder{border:1px dashed #9e7c42;min-height:180px;display:flex;align-items:center;justify-content:center;color:#c4bcb0;text-align:center;padding:20px}footer{text-align:center;border-top:1px solid #6e5738;padding:30px;color:#c4bcb0}
+:root{--bg:#111211;--gold:#c9ad78;--white:#f6f2eb;--muted:#b7b4ac}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Montserrat,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}
+header{position:absolute;z-index:5;top:0;left:0;width:100%;display:flex;align-items:center;justify-content:space-between;padding:26px 6%;background:linear-gradient(#0009,transparent)}
+.brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:27px;letter-spacing:3px;color:var(--gold)}
+nav{display:flex;gap:25px;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+nav a:hover{color:var(--gold)}
+.hero{min-height:94vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:150px 22px 100px;background:linear-gradient(#0009,#000b),url('IMG_5250.jpeg') center/cover}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:5px;text-transform:uppercase}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+h1{font-size:clamp(64px,10vw,125px);line-height:.95;letter-spacing:2px;margin:25px 0}
+.hero p{font-size:13px;letter-spacing:3px;text-transform:uppercase}
+.rule{width:65px;height:1px;background:var(--gold);margin:30px auto}
+.btn{display:inline-block;margin-top:22px;border:1px solid var(--gold);padding:14px 30px;color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:.2s}
+.btn:hover{background:var(--gold);color:#111}
+section{padding:100px 7%}
+.wrap{max-width:1160px;margin:auto}
+.center{text-align:center}
+h2{font-size:clamp(44px,6vw,70px);line-height:1.1;margin:16px 0 28px}
+.lead{max-width:760px;margin:0 auto;color:var(--muted);font-size:15px}
+.intro{background:#191a18}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.intro img{width:100%;height:560px;object-fit:cover}
+.intro p,.service p{color:var(--muted);font-size:14px}
+.services{background:#111211}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:55px}
+.service{border:1px solid #514735;padding:42px 30px;background:#191a18}
+.num{font-size:11px;letter-spacing:3px;color:var(--gold)}
+h3{font-size:32px;line-height:1.15;margin:22px 0}
+.gallery-section{background:#191a18}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:50px}
+.gallery figure{margin:0;overflow:hidden;background:#282923;aspect-ratio:4/5}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.gallery img:hover{transform:scale(1.05)}
+.quote{padding:100px 8%;text-align:center;background:#111211}
+.quote blockquote{max-width:900px;margin:20px auto;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(30px,5vw,53px);line-height:1.3}
+.contact{background:#1b1c19;text-align:center}
+.contact a.contact-link{display:block;color:var(--gold);font-size:clamp(16px,3vw,23px);margin:12px 0;overflow-wrap:anywhere}
+footer{padding:30px 20px;text-align:center;color:#96948d;font-size:10px;letter-spacing:2px}
+@media(max-width:760px){
+header{position:absolute;display:block;text-align:center;padding:20px 10px}
+.brand{font-size:24px}
+nav{justify-content:center;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:9px;letter-spacing:1px}
+.hero{min-height:80vh}
+section{padding:70px 6%}
+.intro-grid{grid-template-columns:1fr;gap:25px}
+.intro img{height:360px}
+.cards{grid-template-columns:1fr}
+.gallery{grid-template-columns:repeat(2,1fr);gap:8px}
+}
 </style>
 </head>
 <body>
-<header><strong>FRANCESCO GENCHI</strong><nav><a href="#chi-sono">Chi sono</a><a href="#competenze">Competenze</a><a href="#portfolio">Portfolio</a><a href="#contatti">Contatti</a></nav></header>
-<div class="hero"><div class="eyebrow">Arte culinaria • Eleganza • Esperienza</div><h1>Francesco Genchi</h1><p>Executive Chef &amp; Food and Beverage Manager</p><p class="muted">Alta ristorazione, cucina mediterranea contemporanea e banqueting d'eccellenza</p><a class="button" href="#portfolio">Scopri il portfolio</a></div>
-<section id="chi-sono"><h2>La mia filosofia</h2><p>Una carriera dedicata alla ristorazione d'eccellenza, alla valorizzazione della tradizione gastronomica pugliese e mediterranea e alla ricerca di nuove espressioni del gusto.</p><p>Esperienza nella direzione delle brigate di cucina, nell'organizzazione di grandi ricevimenti e nella gestione Food &amp; Beverage di strutture alberghiere di lusso.</p></section>
-<section id="competenze"><h2>Le mie specializzazioni</h2><div class="cards"><div class="card"><h3>Alta cucina</h3><p>Creazioni gourmet di mare e terra, tecnica e presentazione contemporanea.</p></div><div class="card"><h3>Wedding &amp; Banqueting</h3><p>Ideazione e organizzazione di ricevimenti, buffet scenografici ed eventi di grande prestigio.</p></div><div class="card"><h3>Food &amp; Beverage</h3><p>Coordinamento operativo, gestione fornitori, controllo dei costi e standard qualitativi.</p></div><div class="card"><h3>Cucina pugliese</h3><p>Identità territoriale, materie prime selezionate e reinterpretazione raffinata della tradizione.</p></div></div></section>
-<section id="portfolio"><h2>Portfolio gastronomico</h2><p>Una selezione delle mie realizzazioni culinarie. Le fotografie saranno aggiunte successivamente.</p><div class="gallery"><div class="placeholder">Fotografia gourmet di mare</div><div class="placeholder">Fotografia gourmet di terra</div><div class="placeholder">Fotografia banqueting</div></div></section>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px">
-<img src="IMG_5250.jpeg" style="width:100%;border-radius:12px">
-<img src="IMG_5251.jpeg" style="width:100%;border-radius:12px">
-<img src="IMG_5252.jpeg" style="width:100%;border-radius:12px">
-<img src="IMG_5253.jpeg" style="width:100%;border-radius:12px">
-</div></section><section id="contatti"><h2>Contatti professionali</h2><p>Per collaborazioni e proposte professionali: chefgenchi@gmail.com</p></section>
-<footer>© 2026 Executive Chef Francesco Genchi — Tutti i diritti riservati</footer>
+<header>
+<a class="brand" href="#">FRANCESCO GENCHI</a>
+<nav>
+<a href="#profilo">Profilo</a>
+<a href="#competenze">Competenze</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contatti">Contatti</a>
+</nav>
+</header>
+
+<main>
+<div class="hero">
+<div>
+<div class="eyebrow">Passione · Esperienza · Eccellenza</div>
+<h1>Francesco<br>Genchi</h1>
+<div class="rule"></div>
+<p>Executive Chef | Food & Beverage Manager</p>
+<a class="btn" href="#portfolio">Esplora il portfolio</a>
+</div>
+</div>
+
+<section class="intro" id="profilo">
+<div class="wrap intro-grid">
+<img src="IMG_5251.jpeg" alt="Interpretazione gastronomica contemporanea">
+<div>
+<div class="eyebrow">Il profilo professionale</div>
+<h2>L'arte di creare esperienze</h2>
+<p>Una carriera nella ristorazione iniziata nel 1982, dedicata alla ricerca dell'eccellenza, alla valorizzazione delle materie prime e alla direzione delle brigate di cucina.</p>
+<p>La mia visione unisce tradizione mediterranea, identità pugliese e sensibilità contemporanea, con particolare attenzione all'alta ristorazione alberghiera, ai ricevimenti e alla gestione Food & Beverage.</p>
+<p>Ogni proposta nasce dall'equilibrio tra gusto, estetica, organizzazione e qualità del servizio.</p>
+</div>
+</div>
+</section>
+
+<section class="services" id="competenze">
+<div class="wrap center">
+<div class="eyebrow">Esperienza e visione</div>
+<h2>Le mie specializzazioni</h2>
+<p class="lead">Creatività gastronomica e capacità gestionale al servizio dell'ospitalità di alto livello.</p>
+<div class="cards">
+<div class="service">
+<div class="num">01 / ALTA CUCINA</div>
+<h3>Fine Dining & Cucina Gourmet</h3>
+<p>Interpretazioni contemporanee di mare e terra, studio degli abbinamenti, valorizzazione del prodotto e cura dell'impiattamento.</p>
+</div>
+<div class="service">
+<div class="num">02 / GRANDI EVENTI</div>
+<h3>Wedding & Banqueting</h3>
+<p>Progettazione di menù, buffet e percorsi gastronomici per ricevimenti ed eventi, con esperienza in servizi fino a 700 ospiti.</p>
+</div>
+<div class="service">
+<div class="num">03 / DIREZIONE</div>
+<h3>Food & Beverage Management</h3>
+<p>Organizzazione delle brigate, gestione dei fornitori, controllo dei costi, standard qualitativi e coordinamento operativo.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="gallery-section" id="portfolio">
+<div class="wrap center">
+<div class="eyebrow">Ricerca · Creatività · Presentazione</div>
+<h2>Portfolio gastronomico</h2>
+<p class="lead">Una selezione di immagini e progetti gastronomici dedicati all'estetica del piatto e alla cucina contemporanea.</p>
+<div class="gallery">
+<figure><img src="IMG_5250.jpeg" alt="Portfolio gastronomico 1" loading="lazy"></figure>
+<figure><img src="IMG_5251.jpeg" alt="Portfolio gastronomico 2" loading="lazy"></figure>
+<figure><img src="IMG_5252.jpeg" alt="Portfolio gastronomico 3" loading="lazy"></figure>
+<figure><img src="IMG_5253.jpeg" alt="Portfolio gastronomico 4" loading="lazy"></figure>
+<figure><img src="IMG_5254.jpeg" alt="Portfolio gastronomico 5" loading="lazy"></figure>
+<figure><img src="IMG_5256.jpeg" alt="Portfolio gastronomico 6" loading="lazy"></figure>
+<figure><img src="IMG_5257.jpeg" alt="Portfolio gastronomico 7" loading="lazy"></figure>
+<figure><img src="IMG_5258.jpeg" alt="Portfolio gastronomico 8" loading="lazy"></figure>
+<figure><img src="IMG_5259.jpeg" alt="Portfolio gastronomico 9" loading="lazy"></figure>
+<figure><img src="IMG_5260.jpeg" alt="Portfolio gastronomico 10" loading="lazy"></figure>
+<figure><img src="IMG_5261.jpeg" alt="Portfolio gastronomico 11" loading="lazy"></figure>
+<figure><img src="IMG_5262.jpeg" alt="Portfolio gastronomico 12" loading="lazy"></figure>
+<figure><img src="IMG_5263.jpeg" alt="Portfolio gastronomico 13" loading="lazy"></figure>
+<figure><img src="IMG_5264.jpeg" alt="Portfolio gastronomico 14" loading="lazy"></figure>
+</div>
+</div>
+</section>
+
+<div class="quote">
+<div class="eyebrow">La mia filosofia</div>
+<blockquote>“La cucina è il punto d'incontro tra memoria, tecnica e creatività. Ogni dettaglio contribuisce a rendere unica un'esperienza.”</blockquote>
+<div class="rule"></div>
+<div class="eyebrow">Executive Chef Francesco Genchi</div>
+</div>
+
+<section class="contact" id="contatti">
+<div class="wrap">
+<div class="eyebrow">Collaborazioni professionali</div>
+<h2>Contatti</h2>
+<p class="lead">Per collaborazioni, progetti gastronomici e opportunità professionali nel settore dell'ospitalità.</p>
+<a class="contact-link" href="mailto:chefgenchi@gmail.com">chefgenchi@gmail.com</a>
+<a class="contact-link" href="tel:+393465874565">+39 346 5874565</a>
+<a class="btn" href="mailto:chefgenchi@gmail.com?subject=Collaborazione%20professionale">Scrivimi</a>
+</div>
+</section>
+</main>
+
+<footer>© 2026 FRANCESCO GENCHI · EXECUTIVE CHEF & FOOD AND BEVERAGE MANAGER</footer>
 </body>
 </html>
