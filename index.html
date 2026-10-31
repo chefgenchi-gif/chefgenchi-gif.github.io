@@ -57,3 +57,77 @@ header .brand img { display: none !important; }
 </p>
 
 <style>footer { display: none !important; }</style>
+
+<!-- Consenso per le statistiche -->
+<style>
+#privacy-banner {
+  position:fixed;bottom:15px;left:5%;width:90%;
+  box-sizing:border-box;background:#191919;color:white;
+  border:1px solid #c9ad78;border-radius:12px;
+  padding:20px;z-index:99999;text-align:center;
+  font-family:Arial,sans-serif;box-shadow:0 4px 20px #0008;
+}
+#privacy-banner button,#privacy-settings {
+  background:#c9ad78;color:#111;border:0;
+  padding:10px 18px;margin:6px;border-radius:5px;
+  cursor:pointer;font-weight:bold;
+}
+#privacy-banner a {color:#e6c994}
+#privacy-settings {position:fixed;bottom:8px;right:8px;z-index:9998;font-size:12px}
+</style>
+
+<div id="privacy-banner" hidden>
+  <strong>Privacy e statistiche</strong>
+  <p>Utilizziamo Google Analytics soltanto con il tuo consenso
+  per conoscere il numero di visite e migliorare il sito.
+  Puoi accettare o rifiutare liberamente.</p>
+  <p><a href="#informativa-privacy">Leggi l'informativa privacy</a></p>
+  <button onclick="sceltaPrivacy(true)">Accetta</button>
+  <button onclick="sceltaPrivacy(false)">Rifiuta</button>
+</div>
+
+<section id="informativa-privacy" style="background:#111;color:#ddd;padding:25px;font-family:Arial,sans-serif;font-size:13px">
+  <h2 style="color:#c9ad78">Informativa privacy</h2>
+  <p>Questo sito presenta l'attivita professionale di Francesco Genchi.
+  Con il consenso dell'utente utilizza Google Analytics per misurare
+  visite e interazioni. Il servizio e fornito da Google e puo trattare
+  dati tecnici relativi alla navigazione.</p>
+  <p>Il consenso e facoltativo, puo essere rifiutato e modificato
+  tramite il pulsante "Preferenze privacy". Le statistiche
+  sono accessibili soltanto al gestore del sito.</p>
+  <p>Informazioni sul trattamento effettuato da Google:
+  <a href="https://policies.google.com/privacy" style="color:#c9ad78">Privacy Google</a>.</p>
+  <p>Contatto: chefgenchi@gmail.com</p>
+</section>
+
+<button id="privacy-settings" onclick="riapriPrivacy()">Preferenze privacy</button>
+
+<script>
+const banner = document.getElementById("privacy-banner");
+const consenso = localStorage.getItem("consenso_statistiche");
+if (consenso === null) banner.hidden = false;
+if (consenso === "si") attivaAnalytics();
+
+function sceltaPrivacy(accetta) {
+  localStorage.setItem("consenso_statistiche", accetta ? "si" : "no");
+  banner.hidden = true;
+  if (accetta) attivaAnalytics();
+  else if (window.gtag) location.reload();
+}
+
+function riapriPrivacy() {
+  banner.hidden = false;
+}
+
+function attivaAnalytics() {
+  if (window.gtag) return;
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-X4DLSV49KN";
+  document.head.appendChild(script);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){dataLayer.push(arguments);};
+  gtag("js", new Date());
+  gtag("config", "G-X4DLSV49KN", {anonymize_ip:true});
+}
+</script>
