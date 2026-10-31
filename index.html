@@ -158,3 +158,20 @@ function attivaAnalytics() {
   gtag("config", "G-X4DLSV49KN", {anonymize_ip:true});
 }
 </script>
+
+
+<audio id="musica-chef" src="clavier-music-passacaglia-classical-calm-piano-background-music-409080.mp3" loop preload="none"></audio>
+<button id="pulsante-musica" type="button" onclick="gestisciMusica()" style="position:fixed;bottom:85px;left:15px;z-index:9999;background:#c9ad78;color:#111;border:0;border-radius:8px;padding:12px 16px;font-weight:bold;cursor:pointer;">♪ Attiva musica</button>
+<script>
+function gestisciMusica() {
+  const audio = document.getElementById("musica-chef");
+  const pulsante = document.getElementById("pulsante-musica");
+  if (audio.paused) {
+    audio.volume = 0.35;
+    audio.play().then(function() { pulsante.textContent = "♫ Ferma musica"; }).catch(function() { pulsante.textContent = "♪ Attiva musica"; });
+  } else {
+    audio.pause();
+    pulsante.textContent = "♪ Attiva musica";
+  }
+}
+</script>
