@@ -112,7 +112,18 @@ function sceltaPrivacy(accetta) {
   localStorage.setItem("consenso_statistiche", accetta ? "si" : "no");
   banner.hidden = true;
   if (accetta) attivaAnalytics();
-  else if (window.gtag) location.reload();
+  
+else {
+  window["ga-disable-G-X4DLSV49KN"] = true;
+  document.cookie.split(";").forEach(function(c) {
+    const nome = c.split("=")[0].trim();
+    if (nome === "_ga" || nome.startsWith("_ga_")) {
+      document.cookie = nome + "=; Max-Age=0; path=/";
+    }
+  });
+  location.reload();
+}
+
 }
 
 function riapriPrivacy() {
